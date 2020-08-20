@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageNoise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-CU-VpX">
+                                <rect key="frame" x="71" y="30" width="781" height="325"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WbU-he-HeN">
+                                        <rect key="frame" x="0.0" y="0.0" width="386.5" height="325"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Dh-uc-DAV">
+                                        <rect key="frame" x="394.5" y="0.0" width="386.5" height="325"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="kZ6-g7-CAK"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djV-WJ-mfC">
+                                <rect key="frame" x="417" y="363" width="83" height="30"/>
+                                <state key="normal" title="Open image"/>
+                                <connections>
+                                    <action selector="loadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiV-4o-6Se"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-1e-OOr">
+                                <rect key="frame" x="44" y="20" width="828" height="373"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Khh-1e-OOr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3hp-MA-GdG"/>
+                            <constraint firstItem="RYI-CU-VpX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="Dd5-uu-75H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Khh-1e-OOr" secondAttribute="trailing" constant="-20" id="IWt-V7-hck"/>
+                            <constraint firstItem="djV-WJ-mfC" firstAttribute="top" secondItem="RYI-CU-VpX" secondAttribute="bottom" constant="8" id="Iqu-uJ-XF0"/>
+                            <constraint firstItem="djV-WJ-mfC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T9K-MU-B8T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RYI-CU-VpX" secondAttribute="trailing" id="WYo-Fi-vnx"/>
+                            <constraint firstItem="djV-WJ-mfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="373" id="f4u-cb-P8C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="djV-WJ-mfC" secondAttribute="trailing" constant="352" id="jiF-yX-fjw"/>
+                            <constraint firstItem="RYI-CU-VpX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="kPp-Nd-HS3"/>
+                            <constraint firstItem="Khh-1e-OOr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mpi-RQ-Hi9"/>
+                            <constraint firstItem="Khh-1e-OOr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="suZ-LY-4X2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstImage" destination="WbU-he-HeN" id="J2v-mI-N6l"/>
+                        <outlet property="fullScreenImage" destination="Khh-1e-OOr" id="3T0-Fz-0Jc"/>
+                        <outlet property="secondImage" destination="0Dh-uc-DAV" id="6N2-0V-O5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.60714285714286" y="111.59420289855073"/>
+        </scene>
+    </scenes>
+</document>
